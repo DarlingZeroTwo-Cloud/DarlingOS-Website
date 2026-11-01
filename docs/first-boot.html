@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>首次启动 - Darling OS</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+            color: #fff;
+            min-height: 100vh;
+        }
+        nav {
+            padding: 20px 50px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: rgba(255,255,255,0.05);
+            backdrop-filter: blur(10px);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 100;
+        }
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            background: linear-gradient(90deg, #64b5f6, #42a5f5);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .nav-links a {
+            color: #fff;
+            text-decoration: none;
+            margin-left: 30px;
+            opacity: 0.8;
+        }
+        .container {
+            padding: 120px 50px 50px;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        h1 {
+            font-size: 48px;
+            margin-bottom: 30px;
+            color: #64b5f6;
+        }
+        .step {
+            background: rgba(255,255,255,0.05);
+            padding: 25px;
+            border-radius: 15px;
+            margin: 20px 0;
+        }
+        .step h3 {
+            color: #64b5f6;
+            margin-bottom: 15px;
+        }
+        .step p {
+            opacity: 0.8;
+            line-height: 1.8;
+        }
+        code {
+            background: rgba(255,255,255,0.1);
+            padding: 2px 8px;
+            border-radius: 5px;
+            font-family: 'JetBrains Mono', monospace;
+        }
+        .back {
+            display: inline-block;
+            margin-bottom: 20px;
+            color: #64b5f6;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="logo">Darling OS</div>
+        <div class="nav-links">
+            <a href="../index.html">首页</a>
+            <a href="../docs.html">文档</a>
+            <a href="../commands.html">命令</a>
+            <a href="../download.html">下载</a>
+        </div>
+    </nav>
+    
+    <div class="container">
+        <a href="../docs.html" class="back">← 返回文档</a>
+        <h1>🖥️ 首次启动</h1>
+        
+        <div class="step">
+            <h3>1️⃣ 登录系统</h3>
+            <p>输入你安装时设置的密码，登录进入 Niri 桌面。</p>
+        </div>
+        
+        <div class="step">
+            <h3>2️⃣ 连接网络</h3>
+            <p>点击顶部状态栏的网络图标，连接 WiFi。</p>
+            <p>如果没有 WiFi 图标，打开终端输：<code>nmtui</code></p>
+        </div>
+        
+        <div class="step">
+            <h3>3️⃣ 更新系统</h3>
+            <p>打开终端（<code>Super + Enter</code>），输：</p>
+            <p><code>sudo pacman -Syu</code></p>
+        </div>
+        
+        <div class="step">
+            <h3>4️⃣ 配置输入法</h3>
+            <p>预装了 fcitx5 + 拼音输入法。</p>
+            <p>按 <code>Ctrl + Space</code> 切换输入法。</p>
+        </div>
+        
+        <div class="step">
+            <h3>5️⃣ 设置壁纸</h3>
+            <p>打开 DMS 设置，选择壁纸。</p>
+            <p>matugen 会自动根据壁纸生成配色方案。</p>
+        </div>
+        
+        <div class="step">
+            <h3>6️⃣ 安装常用软件</h3>
+            <p>打开星火应用商店，搜索安装你需要的软件。</p>
+            <p>或者用命令：<code>paru -S 软件名</code></p>
+        </div>
+    </div>
+</body>
+</html>

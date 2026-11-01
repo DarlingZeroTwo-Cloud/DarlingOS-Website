@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Niri 窗口管理 - Darling OS</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+            color: #fff;
+            min-height: 100vh;
+        }
+        nav {
+            padding: 20px 50px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: rgba(255,255,255,0.05);
+            backdrop-filter: blur(10px);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 100;
+        }
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            background: linear-gradient(90deg, #64b5f6, #42a5f5);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .nav-links a {
+            color: #fff;
+            text-decoration: none;
+            margin-left: 30px;
+            opacity: 0.8;
+        }
+        .container {
+            padding: 120px 50px 50px;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        h1 {
+            font-size: 48px;
+            margin-bottom: 30px;
+            color: #64b5f6;
+        }
+        h2 {
+            font-size: 28px;
+            margin: 40px 0 20px;
+            color: #64b5f6;
+        }
+        .key-table {
+            background: rgba(255,255,255,0.05);
+            padding: 25px;
+            border-radius: 15px;
+            margin: 20px 0;
+        }
+        .key-item {
+            display: flex;
+            padding: 12px 0;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+        }
+        .key-item:last-child {
+            border-bottom: none;
+        }
+        .key {
+            background: rgba(0,0,0,0.3);
+            padding: 5px 15px;
+            border-radius: 8px;
+            font-family: 'JetBrains Mono', monospace;
+            color: #64b5f6;
+            min-width: 180px;
+            margin-right: 20px;
+        }
+        .desc {
+            opacity: 0.8;
+        }
+        .back {
+            display: inline-block;
+            margin-bottom: 20px;
+            color: #64b5f6;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="logo">Darling OS</div>
+        <div class="nav-links">
+            <a href="../index.html">首页</a>
+            <a href="../docs.html">文档</a>
+            <a href="../commands.html">命令</a>
+            <a href="../download.html">下载</a>
+        </div>
+    </nav>
+    
+    <div class="container">
+        <a href="../docs.html" class="back">← 返回文档</a>
+        <h1>🪟 Niri 窗口管理</h1>
+        
+        <p>Niri 是一个滚动式 Wayland 窗口管理器，窗口会像卷轴一样排列。</p>
+        
+        <h2>⌨️ 常用快捷键</h2>
+        
+        <div class="key-table">
+            <div class="key-item">
+                <div class="key">Super + Enter</div>
+                <div class="desc">打开终端</div>
+            </div>
+            <div class="key-item">
+                <div class="key">Super + Q</div>
+                <div class="desc">关闭当前窗口</div>
+            </div>
+            <div class="key-item">
+                <div class="key">Super + 方向键</div>
+                <div class="desc">切换焦点到相邻窗口</div>
+            </div>
+            <div class="key-item">
+                <div class="key">Super + Shift + 方向键</div>
+                <div class="desc">移动窗口位置</div>
+            </div>
+            <div class="key-item">
+                <div class="key">Super + 数字 1-9</div>
+                <div class="desc">切换到工作区 1-9</div>
+            </div>
+            <div class="key-item">
+                <div class="key">Super + Shift + 数字</div>
+                <div class="desc">移动窗口到指定工作区</div>
+            </div>
+            <div class="key-item">
+                <div class="key">Super + Space</div>
+                <div class="desc">打开应用启动器（Fuzzel）</div>
+            </div>
+            <div class="key-item">
+                <div class="key">Super + F</div>
+                <div class="desc">窗口全屏切换</div>
+            </div>
+            <div class="key-item">
+                <div class="key">Super + Esc</div>
+                <div class="desc">退出 Niri</div>
+            </div>
+        </div>
+        
+        <h2>💡 小技巧</h2>
+        
+        <div class="key-table">
+            <div class="key-item">
+                <div class="desc">🖱️ 鼠标滚轮可以滚动切换窗口</div>
+            </div>
+            <div class="key-item">
+                <div class="desc">📱 窗口是竖排的，像手机一样左右滑动切换</div>
+            </div>
+            <div class="key-item">
+                <div class="desc">🎨 主题色会自动跟随壁纸变化</div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
