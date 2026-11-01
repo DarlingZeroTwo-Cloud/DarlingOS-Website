@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Darling OS - Zero Two</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+            color: #fff;
+            min-height: 100vh;
+        }
+        
+        nav {
+            padding: 20px 50px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: rgba(255,255,255,0.05);
+            backdrop-filter: blur(10px);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 100;
+        }
+        
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            background: linear-gradient(90deg, #64b5f6, #42a5f5);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+        .nav-links a {
+            color: #fff;
+            text-decoration: none;
+            margin-left: 30px;
+            opacity: 0.8;
+            transition: opacity 0.3s;
+        }
+        
+        .nav-links a:hover {
+            opacity: 1;
+        }
+        
+        .hero {
+            padding: 150px 50px 100px;
+            text-align: center;
+        }
+        
+        .hero h1 {
+            font-size: 64px;
+            margin-bottom: 20px;
+            background: linear-gradient(90deg, #64b5f6, #42a5f5, #1e88e5);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+        .hero p {
+            font-size: 20px;
+            opacity: 0.8;
+            margin-bottom: 40px;
+        }
+        
+        .btn {
+            display: inline-block;
+            padding: 15px 40px;
+            background: linear-gradient(90deg, #64b5f6, #42a5f5);
+            color: #fff;
+            text-decoration: none;
+            border-radius: 30px;
+            margin: 0 10px;
+            font-size: 18px;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 30px rgba(66,165,245,0.4);
+        }
+        
+        .btn-outline {
+            background: transparent;
+            border: 2px solid #64b5f6;
+        }
+        
+        .features {
+            padding: 80px 50px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        
+        .feature {
+            background: rgba(255,255,255,0.05);
+            padding: 30px;
+            border-radius: 20px;
+            backdrop-filter: blur(10px);
+        }
+        
+        .feature h3 {
+            margin-bottom: 15px;
+            color: #64b5f6;
+        }
+        
+        .feature p {
+            opacity: 0.8;
+            line-height: 1.6;
+        }
+        
+        footer {
+            text-align: center;
+            padding: 30px;
+            opacity: 0.6;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="logo">Darling OS</div>
+        <div class="nav-links">
+            <a href="#home">首页</a>
+            <a href="#features">特性</a>
+            <a href="#docs">文档</a>
+            <a href="#download">下载</a>
+            <a href="#github">GitHub</a>
+        </div>
+    </nav>
+    
+    <section class="hero" id="home">
+        <h1>Darling OS - Zero Two</h1>
+        <p>基于 Arch Linux 的现代化桌面操作系统</p>
+        <p style="margin-bottom: 40px;">液态玻璃风格 · Niri 窗口管理 · 中文优化 · 开箱即用</p>
+        <a href="#download" class="btn">立即下载</a>
+        <a href="#docs" class="btn btn-outline">查看文档</a>
+    </section>
+    
+    <section class="features" id="features">
+        <div class="feature">
+            <h3>🪟 液态玻璃风格</h3>
+            <p>精美的液态玻璃 UI 设计，macOS 风格的透明效果，现代美观。</p>
+        </div>
+        <div class="feature">
+            <h3>🪟 Niri 窗口管理</h3>
+            <p>基于 Wayland 的 Niri 滚动式窗口管理器，流畅高效。</p>
+        </div>
+        <div class="feature">
+            <h3>🇨🇳 中文优化</h3>
+            <p>完整中文支持，输入法预装，开箱即用。</p>
+        </div>
+        <div class="feature">
+            <h3>📦 预装应用</h3>
+            <p>浏览器、办公、开发工具全部预装，无需额外配置。</p>
+        </div>
+        <div class="feature">
+            <h3>🎨 自定义主题</h3>
+            <p>matugen 动态配色，自动跟随壁纸生成主题色。</p>
+        </div>
+        <div class="feature">
+            <h3>⚡ 轻量快速</h3>
+            <p>基于 Arch Linux，轻量高效，启动飞快。</p>
+        </div>
+    </section>
+    
+    <footer>
+        <p>© 2026 Darling OS - Zero Two. 开源免费。</p>
+    </footer>
+</body>
+</html>

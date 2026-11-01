@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>常用命令 - Darling OS</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+            color: #fff;
+            min-height: 100vh;
+        }
+        nav {
+            padding: 20px 50px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: rgba(255,255,255,0.05);
+            backdrop-filter: blur(10px);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 100;
+        }
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            background: linear-gradient(90deg, #64b5f6, #42a5f5);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .nav-links a {
+            color: #fff;
+            text-decoration: none;
+            margin-left: 30px;
+            opacity: 0.8;
+        }
+        .container {
+            padding: 120px 50px 50px;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        h1 {
+            font-size: 48px;
+            margin-bottom: 30px;
+            color: #64b5f6;
+        }
+        h2 {
+            font-size: 28px;
+            margin: 40px 0 20px;
+            color: #64b5f6;
+        }
+        .cmd-group {
+            background: rgba(255,255,255,0.05);
+            padding: 25px;
+            border-radius: 15px;
+            margin: 20px 0;
+        }
+        .cmd-item {
+            margin: 15px 0;
+            display: flex;
+            align-items: center;
+        }
+        .cmd {
+            background: rgba(0,0,0,0.3);
+            padding: 8px 15px;
+            border-radius: 8px;
+            font-family: 'JetBrains Mono', monospace;
+            margin-right: 15px;
+            color: #64b5f6;
+            min-width: 200px;
+        }
+        .desc {
+            opacity: 0.8;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="logo">Darling OS</div>
+        <div class="nav-links">
+            <a href="index.html">首页</a>
+            <a href="docs.html">文档</a>
+            <a href="commands.html">命令</a>
+            <a href="download.html">下载</a>
+        </div>
+    </nav>
+    
+    <div class="container">
+        <h1>⌨️ 常用命令</h1>
+        
+        <h2>📦 软件包管理</h2>
+        <div class="cmd-group">
+            <div class="cmd-item">
+                <div class="cmd">sudo pacman -Syu</div>
+                <div class="desc">更新系统</div>
+            </div>
+            <div class="cmd-item">
+                <div class="cmd">sudo pacman -S 包名</div>
+                <div class="desc">安装软件</div>
+            </div>
+            <div class="cmd-item">
+                <div class="cmd">sudo pacman -Rns 包名</div>
+                <div class="desc">卸载软件（含依赖）</div>
+            </div>
+            <div class="cmd-item">
+                <div class="cmd">paru -S 包名</div>
+                <div class="desc">安装 AUR 软件</div>
+            </div>
+        </div>
+        
+        <h2>🖥️ 系统信息</h2>
+        <div class="cmd-group">
+            <div class="cmd-item">
+                <div class="cmd">fastfetch</div>
+                <div class="desc">显示系统信息和 logo</div>
+            </div>
+            <div class="cmd-item">
+                <div class="cmd">btop</div>
+                <div class="desc">系统资源监控</div>
+            </div>
+            <div class="cmd-item">
+                <div class="cmd">neofetch</div>
+                <div class="desc">显示系统信息</div>
+            </div>
+        </div>
+        
+        <h2>🪟 Niri 窗口管理</h2>
+        <div class="cmd-group">
+            <div class="cmd-item">
+                <div class="cmd">Super + Enter</div>
+                <div class="desc">打开终端</div>
+            </div>
+            <div class="cmd-item">
+                <div class="cmd">Super + Q</div>
+                <div class="desc">关闭窗口</div>
+            </div>
+            <div class="cmd-item">
+                <div class="cmd">Super + 方向键</div>
+                <div class="desc">切换焦点窗口</div>
+            </div>
+            <div class="cmd-item">
+                <div class="cmd">Super + 数字</div>
+                <div class="desc">切换工作区</div>
+            </div>
+        </div>
+        
+        <h2>📟 终端</h2>
+        <div class="cmd-group">
+            <div class="cmd-item">
+                <div class="cmd">eza</div>
+                <div class="desc">彩色文件列表</div>
+            </div>
+            <div class="cmd-item">
+                <div class="cmd">bat 文件名</div>
+                <div class="desc">带语法高亮的 cat</div>
+            </div>
+            <div class="cmd-item">
+                <div class="cmd">zoxide</div>
+                <div class="desc">快速跳转目录</div>
+            </div>
+        </div>
+        
+        <h2>🔧 系统</h2>
+        <div class="cmd-group">
+            <div class="cmd-item">
+                <div class="cmd">sudo reboot</div>
+                <div class="desc">重启</div>
+            </div>
+            <div class="cmd-item">
+                <div class="cmd">sudo poweroff</div>
+                <div class="desc">关机</div>
+            </div>
+            <div class="cmd-item">
+                <div class="cmd">systemctl status 服务名</div>
+                <div class="desc">查看服务状态</div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
