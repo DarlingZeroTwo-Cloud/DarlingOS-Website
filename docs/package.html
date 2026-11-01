@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>软件包管理 - Darling OS</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+            color: #fff;
+            min-height: 100vh;
+        }
+        nav {
+            padding: 20px 50px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: rgba(255,255,255,0.05);
+            backdrop-filter: blur(10px);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 100;
+        }
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            background: linear-gradient(90deg, #64b5f6, #42a5f5);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .nav-links a {
+            color: #fff;
+            text-decoration: none;
+            margin-left: 30px;
+            opacity: 0.8;
+        }
+        .container {
+            padding: 120px 50px 50px;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        h1 {
+            font-size: 48px;
+            margin-bottom: 30px;
+            color: #64b5f6;
+        }
+        h2 {
+            font-size: 28px;
+            margin: 40px 0 20px;
+            color: #64b5f6;
+        }
+        .cmd-group {
+            background: rgba(255,255,255,0.05);
+            padding: 25px;
+            border-radius: 15px;
+            margin: 20px 0;
+        }
+        .cmd-item {
+            margin: 15px 0;
+            display: flex;
+            align-items: center;
+        }
+        .cmd {
+            background: rgba(0,0,0,0.3);
+            padding: 8px 15px;
+            border-radius: 8px;
+            font-family: 'JetBrains Mono', monospace;
+            margin-right: 15px;
+            color: #64b5f6;
+            min-width: 250px;
+        }
+        .desc {
+            opacity: 0.8;
+        }
+        .back {
+            display: inline-block;
+            margin-bottom: 20px;
+            color: #64b5f6;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="logo">Darling OS</div>
+        <div class="nav-links">
+            <a href="../index.html">首页</a>
+            <a href="../docs.html">文档</a>
+            <a href="../commands.html">命令</a>
+            <a href="../download.html">下载</a>
+        </div>
+    </nav>
+    
+    <div class="container">
+        <a href="../docs.html" class="back">← 返回文档</a>
+        <h1>📦 软件包管理</h1>
+        
+        <h2>📦 pacman（官方仓库）</h2>
+        <div class="cmd-group">
+            <div class="cmd-item">
+                <div class="cmd">sudo pacman -Syu</div>
+                <div class="desc">更新系统 + 所有软件</div>
+            </div>
+            <div class="cmd-item">
+                <div class="cmd">sudo pacman -S 软件名</div>
+                <div class="desc">安装软件</div>
+            </div>
+            <div class="cmd-item">
+                <div class="cmd">sudo pacman -Rns 软件名</div>
+                <div class="desc">卸载软件（含依赖）</div>
+            </div>
+            <div class="cmd-item">
+                <div class="cmd">sudo pacman -Ss 关键词</div>
+                <div class="desc">搜索软件</div>
+            </div>
+            <div class="cmd-item">
+                <div class="cmd">paccache -rk0</div>
+                <div class="desc">清理缓存</div>
+            </div>
+        </div>
+        
+        <h2>🔨 paru（AUR 仓库）</h2>
+        <div class="cmd-group">
+            <div class="cmd-item">
+                <div class="cmd">paru -S 软件名</div>
+                <div class="desc">安装 AUR 软件</div>
+            </div>
+            <div class="cmd-item">
+                <div class="cmd">paru -Ss 关键词</div>
+                <div class="desc">搜索 AUR 软件</div>
+            </div>
+            <div class="cmd-item">
+                <div class="cmd">paru -Y</div>
+                <div class="desc">更新 AUR 软件</div>
+            </div>
+        </div>
+        
+        <h2>🛒 星火应用商店</h2>
+        <p>Darling OS 预装了星火应用商店，图形化安装软件，不用敲命令。</p>
+        <p>在应用启动器里搜索"星火"就能打开。</p>
+    </div>
+</body>
+</html>
