@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>主题配色 - Darling OS</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+            color: #fff;
+            min-height: 100vh;
+        }
+        nav {
+            padding: 20px 50px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: rgba(255,255,255,0.05);
+            backdrop-filter: blur(10px);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 100;
+        }
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            background: linear-gradient(90deg, #64b5f6, #42a5f5);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .nav-links a {
+            color: #fff;
+            text-decoration: none;
+            margin-left: 30px;
+            opacity: 0.8;
+        }
+        .container {
+            padding: 120px 50px 50px;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        h1 {
+            font-size: 48px;
+            margin-bottom: 30px;
+            color: #64b5f6;
+        }
+        .step {
+            background: rgba(255,255,255,0.05);
+            padding: 25px;
+            border-radius: 15px;
+            margin: 20px 0;
+        }
+        .step h3 {
+            color: #64b5f6;
+            margin-bottom: 15px;
+        }
+        .step p {
+            opacity: 0.8;
+            line-height: 1.8;
+        }
+        code {
+            background: rgba(255,255,255,0.1);
+            padding: 2px 8px;
+            border-radius: 5px;
+            font-family: 'JetBrains Mono', monospace;
+        }
+        .back {
+            display: inline-block;
+            margin-bottom: 20px;
+            color: #64b5f6;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="logo">Darling OS</div>
+        <div class="nav-links">
+            <a href="../index.html">首页</a>
+            <a href="../docs.html">文档</a>
+            <a href="../commands.html">命令</a>
+            <a href="../download.html">下载</a>
+        </div>
+    </nav>
+    
+    <div class="container">
+        <a href="../docs.html" class="back">← 返回文档</a>
+        <h1>🎨 主题配色</h1>
+        
+        <div class="step">
+            <h3>什么是 matugen？</h3>
+            <p>matugen 是一个动态配色工具，会自动从你的壁纸提取主色调，生成整个系统的配色方案。</p>
+            <p>换壁纸 = 自动换主题！</p>
+        </div>
+        
+        <div class="step">
+            <h3>自动配色</h3>
+            <p>Darling OS 已经配置好了自动配色。</p>
+            <p>你只需要换壁纸，系统就会自动生成新的配色。</p>
+            <p>支持：GTK 主题、终端、Niri、DMS、Waybar 等全部组件。</p>
+        </div>
+        
+        <div class="step">
+            <h3>手动配色</h3>
+            <p>如果你想手动设置配色，打开终端输：</p>
+            <p><code>matugen image 壁纸路径</code></p>
+            <p>就会重新生成配色方案。</p>
+        </div>
+        
+        <div class="step">
+            <h3>配色方案位置</h3>
+            <p>生成的配色文件在：<code>~/.config/matugen/</code></p>
+            <p>你也可以手动编辑这些文件来自定义配色。</p>
+        </div>
+    </div>
+</body>
+</html>
