@@ -3,102 +3,150 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>下载 - Darling OS</title>
+    <title>下载 - Darling OS - Zero Two</title>
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
-            color: #fff;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', sans-serif;
+            background: #0a0a0f;
+            color: #e0e0e0;
             min-height: 100vh;
         }
         nav {
-            padding: 20px 50px;
+            padding: 20px 60px;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            background: rgba(255,255,255,0.05);
-            backdrop-filter: blur(10px);
+            background: rgba(10,10,15,0.8);
+            backdrop-filter: blur(20px);
             position: fixed;
             width: 100%;
             top: 0;
             z-index: 100;
+            border-bottom: 1px solid rgba(255,255,255,0.05);
         }
         .logo {
-            font-size: 24px;
-            font-weight: bold;
-            background: linear-gradient(90deg, #64b5f6, #42a5f5);
+            font-size: 22px;
+            font-weight: 700;
+            background: linear-gradient(135deg, #ff6b9d, #c44dff);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
         .nav-links a {
-            color: #fff;
+            color: #e0e0e0;
             text-decoration: none;
-            margin-left: 30px;
-            opacity: 0.8;
+            margin-left: 32px;
+            font-size: 15px;
+            opacity: 0.7;
+            transition: all 0.3s;
         }
+        .nav-links a:hover { opacity: 1; color: #ff6b9d; }
         .container {
-            padding: 120px 50px 50px;
+            padding: 140px 60px 80px;
             max-width: 900px;
             margin: 0 auto;
-            text-align: center;
         }
         h1 {
-            font-size: 48px;
-            margin-bottom: 30px;
-            color: #64b5f6;
+            font-size: 42px;
+            margin-bottom: 16px;
+            background: linear-gradient(135deg, #ff6b9d, #c44dff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .subtitle {
+            color: #777;
+            margin-bottom: 48px;
+            font-size: 18px;
         }
         .download-card {
-            background: rgba(255,255,255,0.05);
-            padding: 40px;
+            background: rgba(255,255,255,0.03);
+            border: 1px solid rgba(255,255,255,0.05);
             border-radius: 20px;
-            margin: 30px 0;
-            backdrop-filter: blur(10px);
+            padding: 40px;
+            margin-bottom: 32px;
         }
-        .version {
-            font-size: 32px;
-            margin-bottom: 10px;
-            color: #64b5f6;
+        .download-card h2 {
+            font-size: 24px;
+            margin-bottom: 16px;
+            color: #fff;
         }
-        .size {
-            opacity: 0.7;
-            margin-bottom: 30px;
+        .download-card .version {
+            display: inline-block;
+            background: rgba(255,107,157,0.1);
+            color: #ff6b9d;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 14px;
+            margin-left: 12px;
+        }
+        .download-card p {
+            color: #999;
+            line-height: 1.8;
+            margin-bottom: 24px;
+        }
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin-bottom: 24px;
+        }
+        .info-item {
+            background: rgba(255,255,255,0.02);
+            padding: 16px;
+            border-radius: 12px;
+        }
+        .info-item .label {
+            color: #777;
+            font-size: 13px;
+            margin-bottom: 4px;
+        }
+        .info-item .value {
+            color: #fff;
+            font-weight: 600;
+            font-size: 16px;
         }
         .btn {
             display: inline-block;
-            padding: 15px 50px;
-            background: linear-gradient(90deg, #64b5f6, #42a5f5);
+            padding: 14px 40px;
+            border-radius: 12px;
+            text-decoration: none;
+            font-size: 16px;
+            font-weight: 600;
+            transition: all 0.3s;
+        }
+        .btn-primary {
+            background: linear-gradient(135deg, #ff6b9d, #c44dff);
             color: #fff;
-            text-decoration: none;
-            border-radius: 30px;
-            font-size: 18px;
-            transition: transform 0.3s;
         }
-        .btn:hover {
-            transform: translateY(-3px);
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 12px 40px rgba(255,107,157,0.4);
         }
-        .mirror {
-            margin-top: 20px;
-            opacity: 0.7;
+        .sys-req {
+            background: rgba(255,255,255,0.02);
+            border-radius: 16px;
+            padding: 24px;
+            margin-top: 32px;
         }
-        .mirror a {
-            color: #64b5f6;
-            text-decoration: none;
+        .sys-req h3 {
+            margin-bottom: 16px;
+            color: #fff;
         }
-        .requirements {
-            text-align: left;
-            margin-top: 40px;
-            padding: 30px;
-            background: rgba(255,255,255,0.03);
-            border-radius: 15px;
+        .sys-req ul {
+            list-style: none;
+            color: #999;
+            line-height: 2;
         }
-        .requirements h2 {
-            color: #64b5f6;
-            margin-bottom: 15px;
+        .sys-req li::before {
+            content: "✓ ";
+            color: #ff6b9d;
         }
-        .requirements li {
-            margin: 10px 0;
-            opacity: 0.8;
+        footer {
+            text-align: center;
+            padding: 40px;
+            color: #555;
+            border-top: 1px solid rgba(255,255,255,0.05);
+            margin-top: 60px;
         }
     </style>
 </head>
@@ -114,27 +162,49 @@
     </nav>
     
     <div class="container">
-        <h1>📥 下载 Darling OS</h1>
+        <h1>下载 Darling OS</h1>
+        <p class="subtitle">选择适合你的版本，立即体验</p>
         
         <div class="download-card">
-            <div class="version">Zero Two v1.0</div>
-            <div class="size">约 2.0 GB · 64 位 · 离线版</div>
-            <a href="#" class="btn">⬇ 下载 ISO</a>
-            <div class="mirror">
-                镜像：<a href="#">Gitee</a> · <a href="#">待添加</a>
+            <h2>Darling OS - Zero Two <span class="version">最新版</span></h2>
+            <p>基于 Arch Linux，预装全部软件包和用户配置，离线可安装，中文图形化安装程序。</p>
+            
+            <div class="info-grid">
+                <div class="info-item">
+                    <div class="label">文件大小</div>
+                    <div class="value">4.5 GB</div>
+                </div>
+                <div class="info-item">
+                    <div class="label">文件格式</div>
+                    <div class="value">ISO 镜像</div>
+                </div>
+                <div class="info-item">
+                    <div class="label">系统架构</div>
+                    <div class="value">x86_64</div>
+                </div>
+                <div class="info-item">
+                    <div class="label">版本号</div>
+                    <div class="value">2026.11.01</div>
+                </div>
             </div>
+            
+            <a href="#" class="btn btn-primary">下载 ISO</a>
         </div>
         
-        <div class="requirements">
-            <h2>💻 系统要求</h2>
+        <div class="sys-req">
+            <h3>系统要求</h3>
             <ul>
-                <li>64 位处理器（Intel / AMD）</li>
+                <li>64-bit 处理器（Intel/AMD）</li>
                 <li>最低 2GB 内存（推荐 4GB+）</li>
-                <li>至少 20GB 磁盘空间</li>
-                <li>支持 UEFI 启动</li>
-                <li>有线 / 无线网卡（可选）</li>
+                <li>最低 20GB 磁盘空间</li>
+                <li>支持 UEFI 或 Legacy BIOS 启动</li>
+                <li>支持 Wayland（推荐）或 X11</li>
             </ul>
         </div>
     </div>
+    
+    <footer>
+        <p>© 2026 Darling OS - Zero Two | 开源免费</p>
+    </footer>
 </body>
 </html>
